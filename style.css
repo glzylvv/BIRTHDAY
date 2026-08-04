@@ -1,0 +1,2120 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap');
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#ffd9ec,#dbeafe,#f8f9ff);
+    color:#333;
+    overflow-x:hidden;
+}
+
+/* ===========================
+   BACKGROUND
+=========================== */
+
+.background{
+    position:fixed;
+    inset:0;
+    background:linear-gradient(-45deg,#ffd6e8,#dbeafe,#f5d0fe,#ffffff);
+    background-size:400% 400%;
+    animation:bgMove 15s ease infinite;
+    z-index:-3;
+}
+
+@keyframes bgMove{
+
+0%{background-position:0% 50%;}
+
+50%{background-position:100% 50%;}
+
+100%{background-position:0% 50%;}
+
+}
+
+.overlay{
+    position:fixed;
+    inset:0;
+    backdrop-filter:blur(40px);
+    z-index:-2;
+}
+
+/* ===========================
+   COVER
+=========================== */
+
+.cover{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    transition:opacity .7s ease, transform .7s ease;
+}
+ 
+.cover.is-hidden{
+    opacity:0;
+    pointer-events:none;
+    transform:scale(0.97);
+}
+ 
+#home{
+    opacity:0;
+    transform:translateY(30px);
+    transition:opacity .8s ease, transform .8s ease;
+}
+ 
+#home.is-visible{
+    opacity:1;
+    transform:translateY(0);
+}
+ 
+.glass{
+
+    width:100%;
+    max-width:700px;
+
+    background:rgba(255,255,255,.25);
+
+    border:1px solid rgba(255,255,255,.3);
+
+    backdrop-filter:blur(25px);
+
+    border-radius:30px;
+
+    text-align:center;
+
+    padding:70px 50px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.15);
+
+}
+
+.glass h3{
+
+    color:#ff5fa2;
+
+    letter-spacing:4px;
+
+    margin-bottom:20px;
+
+}
+
+.glass h1{
+
+    font-family:'Great Vibes', cursive;
+
+    font-size:clamp(50px, 8vw, 80px);
+
+    color:#ff3d87;
+
+    font-size:70px;
+    
+    line-height:1.1;
+
+    text-align:center;
+
+}
+
+.glass h2{
+
+    margin:15px 0;
+
+    color:#4f46e5;
+
+}
+
+.glass p{
+
+    line-height:30px;
+
+    color:#555;
+
+}
+
+#openInvitation{
+
+    margin-top:35px;
+
+    padding:15px 45px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    background:linear-gradient(45deg,#ff5fa2,#7c3aed);
+
+    color:white;
+
+    transition:.4s;
+
+}
+
+#openInvitation:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 15px 30px rgba(255,0,140,.3);
+
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+nav{
+
+    position:sticky;
+
+    top:0;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 8%;
+
+    background:rgba(255,255,255,.35);
+
+    backdrop-filter:blur(15px);
+
+    z-index:999;
+
+}
+
+.logo{
+
+    font-size:30px;
+
+    font-family:'Great Vibes',cursive;
+
+    color:#ff3d87;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    gap:30px;
+
+    list-style:none;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:#333;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#ff3d87;
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+
+    align-items:center;
+
+    gap:50px;
+
+    padding:100px 10%;
+
+}
+
+.hero-text h4{
+
+    color:#ff3d87;
+
+}
+
+.hero-text h1{
+
+font-family:'Great Vibes',cursive;
+
+font-size:85px;
+
+color:#ff4f9f;
+
+text-shadow:
+
+0 0 10px rgba(255,105,180,.5),
+
+0 0 20px rgba(255,255,255,.8),
+
+0 0 40px rgba(173,216,230,.5);
+
+animation:glowName 3s ease-in-out infinite;
+
+}
+
+@keyframes glowName{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.03);
+
+}
+
+}
+
+.hero-text h2{
+
+    color:#4f46e5;
+
+}
+
+
+.hero-text p{
+
+    margin:25px 0;
+
+    line-height:32px;
+
+}
+
+.hero h1{
+    margin-top: 10px;
+    font-size: 55px;
+    color: #ff4f9f;
+    font-weight: 700;
+}
+
+.hero p{
+    margin-top: 15px;
+}
+ 
+.hero-text p{
+    font-size:1.02rem;
+    color:#5b5570;
+}
+ 
+.btn{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:15px 40px;
+
+    border-radius:50px;
+
+    background:linear-gradient(45deg,#ff5fa2,#7c3aed);
+
+    transition:.4s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.hero-image{
+
+    text-align:center;
+
+}
+
+.hero-image img{
+    width:380px;
+    max-width:100%;
+    border-radius:50%;
+    border:none;              /* Hapus bingkai putih */
+    background:transparent;
+    box-shadow:0 20px 50px rgba(0,0,0,.2);
+}
+
+/* ===========================
+   COUNTDOWN
+=========================== */
+
+.countdown{
+
+    padding:100px 10%;
+    text-align:center;
+
+}
+
+.countdown h2{
+
+    font-size:45px;
+    color:#ff3d87;
+    margin-bottom:50px;
+    font-family:'Great Vibes',cursive;
+
+}
+
+.count-box{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+
+}
+
+.box{
+
+    background:rgba(255,255,255,.25);
+    backdrop-filter:blur(20px);
+    border-radius:25px;
+    padding:35px;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+    transition:.4s;
+
+}
+
+.box:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.box span{
+
+    font-size:55px;
+    font-weight:bold;
+    color:#ff3d87;
+
+}
+
+.box p{
+
+    margin-top:10px;
+    color:#666;
+
+}
+
+/* ===========================
+EVENT
+=========================== */
+
+.event{
+
+    padding:100px 10%;
+
+}
+
+.event h2{
+
+    text-align:center;
+    font-size:45px;
+    color:#4f46e5;
+    margin-bottom:50px;
+    font-family:'Great Vibes',cursive;
+
+}
+
+.event-card{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+
+}
+
+.event-item{
+
+    background:white;
+    border-radius:25px;
+    padding:40px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    transition:.4s;
+
+}
+
+.event-item:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.event-item i{
+
+    font-size:45px;
+    color:#ff3d87;
+    margin-bottom:20px;
+
+}
+
+.event-item h3{
+
+    margin-bottom:10px;
+
+}
+
+/* ===========================
+STORY
+=========================== */
+
+.story{
+padding:100px 10%;
+}
+
+.section-heading{
+text-align:center;
+margin-bottom:45px;
+}
+
+.eyebrow{
+display:inline-block;
+padding:8px 16px;
+border-radius:999px;
+background:rgba(255,255,255,.45);
+color:#ff4f9f;
+font-size:14px;
+font-weight:600;
+letter-spacing:0.2em;
+text-transform:uppercase;
+margin-bottom:18px;
+}
+
+.section-heading h2{
+font-size:40px;
+color:#4f46e5;
+font-family:'Great Vibes',cursive;
+}
+
+.story-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+gap:24px;
+}
+
+.story-card{
+background:rgba(255,255,255,.4);
+border:1px solid rgba(255,255,255,.5);
+border-radius:24px;
+padding:30px 24px;
+text-align:center;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+backdrop-filter:blur(18px);
+transition:transform .4s ease, box-shadow .4s ease;
+}
+
+.story-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(255,105,180,.16);
+}
+
+.story-icon{
+font-size:36px;
+margin-bottom:16px;
+}
+
+.story-card h3{
+color:#ff4f9f;
+margin-bottom:10px;
+}
+
+.story-card p{
+color:#5f5f5f;
+line-height:1.8;
+}
+
+/* ===========================
+QUOTE
+=========================== */
+ 
+.quote{
+
+    padding:100px 15%;
+    text-align:center;
+
+}
+
+.quote h2{
+
+    font-size:40px;
+    color:#ff3d87;
+    font-family:'Great Vibes',cursive;
+    margin-bottom:20px;
+
+}
+
+.quote p{
+
+    line-height:35px;
+    color:#555;
+
+}
+
+/* ===========================
+MAP
+=========================== */
+
+.maps{
+
+    padding:100px 10%;
+    text-align:center;
+
+}
+
+.maps h2{
+
+    font-size:45px;
+    color:#4f46e5;
+    margin-bottom:30px;
+    font-family:'Great Vibes',cursive;
+
+}
+
+.map-card{
+
+    background:white;
+    padding:45px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+}
+
+.map-card p{
+
+    margin-bottom:20px;
+
+}
+
+.map-card a{
+
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+    background:#ff3d87;
+    padding:15px 35px;
+    border-radius:40px;
+    transition:.3s;
+
+}
+
+.map-card a:hover{
+
+    background:#4f46e5;
+
+}
+
+/* ===========================
+GALLERY
+=========================== */
+
+.gallery{
+
+    padding:100px 10%;
+
+}
+
+.gallery h2{
+
+    font-size:55px;
+
+    color:#ff4f9f;
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+    font-family:'Great Vibes',cursive;
+
+    text-shadow:
+
+    0 0 15px rgba(255,105,180,.35);
+
+}
+
+.gallery-container{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+
+}
+
+.gallery-item{
+
+    overflow:hidden;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+.gallery-item img{
+
+    width:100%;
+    display:block;
+    transition:.5s;
+
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.1);
+
+}
+
+/* ===========================
+RSVP
+=========================== */
+
+.rsvp{
+
+    padding:100px 10%;
+    text-align:center;
+
+}
+
+.rsvp h2{
+
+    font-size:45px;
+    color:#4f46e5;
+    margin-bottom:20px;
+    font-family:'Great Vibes',cursive;
+
+}
+
+.rsvp p{
+
+    margin-bottom:35px;
+
+}
+
+.wa-btn{
+
+    display:inline-block;
+    background:linear-gradient(45deg,#ff4f9f,#7c3aed);
+    color:white;
+    text-decoration:none;
+    padding:18px 45px;
+    border-radius:50px;
+    font-size:18px;
+    transition:.4s;
+
+}
+
+.wa-btn:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ===========================
+FOOTER
+=========================== */
+
+footer{
+
+    padding:50px;
+    text-align:center;
+    color:#777;
+
+}
+
+footer h2{
+
+    color:#ff3d87;
+    font-family:'Great Vibes',cursive;
+    margin-bottom:15px;
+
+}
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+nav{
+
+flex-direction:column;
+gap:20px;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+justify-content:center;
+
+}
+
+.hero{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.hero-text h1{
+
+font-size:60px;
+
+}
+
+.count-box{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:480px){
+ 
+.story-card{
+    padding:24px 18px;
+}
+ 
+.section-heading h2{
+    font-size:32px;
+}
+ 
+.count-box{
+
+grid-template-columns:1fr;
+
+}
+
+.hero-text h1{
+
+font-size:50px;
+
+}
+
+.glass h1{
+
+font-size:60px;
+
+}
+
+.glass{
+
+padding:40px 25px;
+
+}
+
+}
+
+body{
+cursor:url("https://cur.cursors-4u.net/nature/nat-11/nat1020.cur"),auto;
+}
+
+/* ===========================
+MUSIC
+=========================== */
+#musicBtn{
+
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+width:60px;
+
+height:60px;
+
+border:none;
+
+border-radius:50%;
+
+background:#ff4f9f;
+
+color:white;
+
+font-size:25px;
+
+cursor:pointer;
+
+box-shadow:0 10px 20px rgba(0,0,0,.2);
+
+z-index:999;
+
+}
+
+/* ===========================
+PROFILE IMAGE
+=========================== */
+.profile-img{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+
+    border:none;              /* HILANGKAN BINGKAI PUTIH */
+
+    background:transparent;   /* Transparan */
+
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+
+    transition:.4s;
+}
+
+.profile-img:hover{
+    transform: scale(1.05);
+}
+
+/*==================================
+        PREMIUM PROFILE
+==================================*/
+
+.hero-image{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero-image::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:430px;
+    height:430px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(circle,
+    rgba(255,105,180,.18),
+    rgba(173,216,230,.12),
+    transparent 70%);
+
+    animation:pulseGlow 4s ease-in-out infinite;
+
+    filter:blur(10px);
+
+    z-index:0;
+
+}
+
+.hero-image img{
+
+    position:relative;
+
+    width:320px;
+
+    height:320px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:none;
+
+    z-index:2;
+
+    transition:.6s;
+
+    box-shadow:
+    0 15px 40px rgba(255,105,180,.25),
+    0 10px 35px rgba(135,206,250,.25);
+
+    animation:floating 5s ease-in-out infinite;
+
+}
+
+.hero-image img:hover{
+
+    transform:scale(1.07) rotate(2deg);
+
+}
+
+/* Ring Glow */
+
+.hero-image::after{
+
+content:"";
+
+position:absolute;
+
+width:350px;
+
+height:350px;
+
+border-radius:50%;
+
+border:2px dashed rgba(255,255,255,.25);
+
+animation:rotateRing 18s linear infinite;
+
+z-index:1;
+
+}
+
+/* Floating */
+
+@keyframes floating{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Glow */
+
+@keyframes pulseGlow{
+
+0%{
+
+transform:scale(1);
+
+opacity:.6;
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:scale(1);
+
+opacity:.6;
+
+}
+
+}
+
+/* Ring */
+
+@keyframes rotateRing{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/*==================================
+        SPARKLE
+==================================*/
+
+.sparkle{
+
+position:fixed;
+
+bottom:-20px;
+
+width:8px;
+
+height:8px;
+
+border-radius:50%;
+
+background:white;
+
+box-shadow:
+0 0 10px white,
+0 0 20px #ff69b4,
+0 0 35px #87cefa;
+
+opacity:.9;
+
+animation:sparkleUp linear forwards;
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+
+@keyframes sparkleUp{
+
+0%{
+
+transform:
+translateY(0)
+scale(.5);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+translateY(-120vh)
+scale(1.5);
+
+opacity:0;
+
+}
+
+}
+
+/*==================================
+        CONFETTI
+==================================*/
+
+.confetti{
+
+    position:fixed;
+
+    width:12px;
+
+    height:12px;
+
+    top:-20px;
+
+    border-radius:3px;
+
+    z-index:9999;
+
+    pointer-events:none;
+
+    animation:confettiFall linear forwards;
+
+}
+
+@keyframes confettiFall{
+
+0%{
+
+transform:
+translateY(0)
+rotate(0deg);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+translateY(110vh)
+rotate(1080deg);
+
+opacity:0;
+
+}
+
+}
+
+/*==================================
+        LIGHTBOX
+==================================*/
+
+#lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.92);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+    animation:fadeLight .4s;
+
+}
+
+#lightbox img{
+
+    max-width:90%;
+
+    max-height:85%;
+
+    border-radius:20px;
+
+    box-shadow:0 20px 60px rgba(255,255,255,.15);
+
+    animation:zoomPhoto .4s;
+
+}
+
+#closeLightbox{
+
+    position:absolute;
+
+    top:25px;
+
+    right:40px;
+
+    color:white;
+
+    font-size:55px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#closeLightbox:hover{
+
+    transform:rotate(90deg);
+
+    color:#ff69b4;
+
+}
+
+@keyframes zoomPhoto{
+
+from{
+
+transform:scale(.5);
+
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+@keyframes fadeLight{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+/* ===========================
+   PREMIUM GALLERY
+=========================== */
+
+.gallery-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+}
+
+.gallery-item{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    cursor:pointer;
+
+    transition:.5s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+.gallery-item img{
+
+    width:100%;
+
+    height:350px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.6s;
+
+}
+
+.gallery-item::before{
+
+    content:"📸 View Photo";
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.45);
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    opacity:0;
+
+    transition:.5s;
+
+    z-index:2;
+
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.15);
+
+}
+
+.gallery-item:hover::before{
+
+    opacity:1;
+
+}
+
+.gallery-item:hover{
+
+    transform:translateY(-12px);
+
+}
+
+.gallery-subtitle{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:50px;
+
+    font-size:18px;
+
+}
+
+.gallery-item{
+
+    animation:galleryFloat 5s ease-in-out infinite;
+
+}
+
+.gallery-item:nth-child(even){
+
+animation-delay:1s;
+
+}
+
+@keyframes galleryFloat{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/*==================================
+        LETTER
+==================================*/
+
+.letter{
+
+    padding:100px 10%;
+
+    text-align:center;
+
+}
+
+.letter h2{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:55px;
+
+    color:#ff4f9f;
+
+    margin-bottom:50px;
+
+}
+
+.envelope{
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+.letter-card{
+
+    background:rgba(255,255,255,.25);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:30px;
+
+    padding:50px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+
+    transition:.5s;
+
+}
+
+.letter-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.letter-card h3{
+
+    color:#ff4f9f;
+
+    margin-bottom:25px;
+
+}
+
+.letter-card p{
+
+    line-height:35px;
+
+    color:#555;
+
+    margin-bottom:20px;
+
+}
+
+.letter-card h4{
+
+    margin-top:35px;
+
+    color:#4f46e5;
+
+}
+
+.letter-card span{
+
+    font-size:30px;
+
+    font-family:'Great Vibes',cursive;
+
+    color:#ff4f9f;
+
+}
+
+/*==================================
+        GUEST BOOK
+==================================*/
+
+.guestbook{
+
+    padding:100px 10%;
+
+    text-align:center;
+
+}
+
+.guestbook h2{
+
+    font-size:55px;
+
+    color:#ff4f9f;
+
+    font-family:'Great Vibes',cursive;
+
+}
+
+.guest-subtitle{
+
+    margin:20px 0 45px;
+
+    color:#666;
+
+}
+
+.guest-form{
+
+    max-width:700px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.guest-form input,
+.guest-form textarea{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.45);
+
+    backdrop-filter:blur(12px);
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+#sendWish{
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    background:linear-gradient(45deg,#ff4f9f,#7c3aed);
+
+    color:white;
+
+    font-size:18px;
+
+    transition:.4s;
+
+}
+
+#sendWish:hover{
+
+    transform:translateY(-4px);
+
+}
+
+#wishList{
+
+    max-width:800px;
+
+    margin:60px auto 0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.wish{
+
+    background:rgba(255,255,255,.28);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:20px;
+
+    padding:25px;
+
+    text-align:left;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    animation:showWish .5s;
+
+}
+
+.wish h3{
+
+    color:#ff4f9f;
+
+    margin-bottom:10px;
+
+}
+
+.wish p{
+
+    color:#555;
+
+}
+
+@keyframes showWish{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ===========================
+CAKE
+=========================== */
+
+.cake-section{
+
+    padding:100px 10%;
+
+    text-align:center;
+
+}
+
+.cake-section h2{
+
+    font-size:45px;
+
+    color:#ff4f9f;
+
+    font-family:'Great Vibes',cursive;
+
+}
+
+.cake{
+
+    font-size:120px;
+
+    margin:40px 0;
+
+    position:relative;
+
+}
+
+.candle{
+
+    position:absolute;
+
+    left:50%;
+
+    top:5px;
+
+    transform:translateX(-50%);
+
+    width:8px;
+
+    height:40px;
+
+    background:#fff;
+
+    border-radius:10px;
+
+}
+
+.flame{
+
+    width:15px;
+
+    height:25px;
+
+    background:orange;
+
+    border-radius:50%;
+
+    position:absolute;
+
+    top:-22px;
+
+    left:-4px;
+
+    animation:flicker .3s infinite alternate;
+
+}
+
+@keyframes flicker{
+
+from{
+
+transform:scale(1);
+
+}
+
+to{
+
+transform:scale(1.2);
+
+}
+
+}
+
+#blowBtn{
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#ff4f9f;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+}
+
+#wishText{
+
+    margin-top:30px;
+
+    color:#ff4f9f;
+
+}
+
+/* ==========================================
+   RESPONSIVE PREMIUM
+   JANGAN UBAH CSS YANG DI ATAS
+========================================== */
+
+@media screen and (max-width:1024px){
+
+.hero{
+    padding:70px 6%;
+    gap:40px;
+}
+
+.hero-text h1{
+    font-size:65px;
+}
+
+.profile-img{
+    width:280px;
+    height:280px;
+}
+
+}
+
+@media screen and (max-width:768px){
+
+/* Navbar */
+
+nav{
+    flex-direction:column;
+    padding:15px;
+}
+
+nav ul{
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+/* Hero */
+
+.hero{
+    grid-template-columns:1fr;
+    text-align:center;
+    padding:60px 25px;
+}
+
+.hero-text h1{
+    font-size:55px;
+}
+
+.hero-text h2{
+    font-size:28px;
+}
+
+.hero-text p{
+    font-size:16px;
+    line-height:28px;
+}
+
+.profile-img{
+    width:260px;
+    height:260px;
+}
+
+/* Countdown */
+
+.count-box{
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.box{
+    padding:25px;
+}
+
+.box span{
+    font-size:40px;
+}
+
+/* Event */
+
+.event-card{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.event-item:last-child{
+    grid-column:span 2;
+}
+
+/* Story */
+
+.story-grid{
+    grid-template-columns:1fr;
+}
+
+/* Gallery */
+
+.gallery-container{
+    grid-template-columns:repeat(2,1fr);
+}
+
+/* Letter */
+
+.letter-card{
+    padding:25px;
+}
+
+/* Guest Book */
+
+.guest-form{
+    width:100%;
+}
+
+.guest-form input,
+.guest-form textarea,
+.guest-form button{
+    width:100%;
+}
+
+/* Maps */
+
+.map-card{
+    padding:25px;
+}
+
+/* Footer */
+
+footer{
+    padding:30px;
+}
+
+}
+
+/* ==========================================
+   PERBAIKAN TAMPILAN HP (MOBILE FIX)
+   Tempel di PALING BAWAH file style.css
+========================================== */
+
+@media screen and (max-width: 768px) {
+
+  /* Cegah tulisan meluber keluar layar */
+  h1, h2, h3, p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Beri jarak agar konten tidak tertutup navbar */
+  section[id] {
+    scroll-margin-top: 140px;
+  }
+
+  /* HERO: perkecil nama & judul supaya muat */
+  .hero {
+    padding: 40px 20px !important;
+  }
+  .hero-text h1 {
+    font-size: 44px !important;
+    line-height: 1.1 !important;
+  }
+  .hero-text h2 {
+    font-size: 24px !important;
+  }
+  .hero-image img {
+    width: 240px !important;
+    height: 240px !important;
+  }
+  .hero-image::before,
+  .hero-image::after {
+    display: none !important; /* matikan ring & glow agar rapi di HP */
+  }
+
+  /* COVER (halaman pembuka) */
+  .glass h1 {
+    font-size: 48px !important;
+  }
+
+  /* COUNTDOWN: 2 kolom, kotak tidak raksasa */
+  .countdown {
+    padding: 60px 20px !important;
+  }
+  .countdown h2 {
+    font-size: 34px !important;
+  }
+  .count-box {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px !important;
+  }
+  .box {
+    padding: 22px 10px !important;
+  }
+  .box span {
+    font-size: 36px !important;
+  }
+
+  /* Perkecil semua judul besar Great Vibes */
+  .event h2,
+  .maps h2,
+  .rsvp h2,
+  .quote h2,
+  .gallery h2,
+  .letter h2,
+  .guestbook h2,
+  .cake-section h2,
+  .section-heading h2 {
+    font-size: 34px !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Beri padding kiri-kanan yang konsisten */
+  .event,
+  .story,
+  .quote,
+  .maps,
+  .gallery,
+  .rsvp,
+  .letter,
+  .guestbook,
+  .cake-section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* Kartu isi lebih pas di layar kecil */
+  .letter-card,
+  .map-card {
+    padding: 30px 22px !important;
+  }
+
+  /* Tombol tidak kepanjangan */
+  .btn,
+  .wa-btn,
+  #sendWish,
+  #openInvitation {
+    font-size: 15px !important;
+    padding: 14px 28px !important;
+  }
+}
+
+/* Layar HP kecil (misal HP mungil) */
+@media screen and (max-width: 400px) {
+  .hero-text h1 { font-size: 36px !important; }
+  .glass h1 { font-size: 40px !important; }
+  .count-box { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+/* ==========================================
+   NAVBAR TITIK TIGA — HANYA UNTUK HP
+   Laptop TIDAK berubah sama sekali
+========================================== */
+
+/* Di laptop, sembunyikan tombol titik tiga */
+.menu-toggle{
+  display: none;
+}
+
+/* Aturan ini HANYA aktif di HP (layar <= 768px) */
+@media screen and (max-width: 768px){
+
+  nav{
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    position: sticky !important;
+  }
+
+  .nav-left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  /* Tampilkan tombol titik tiga di HP */
+  .menu-toggle{
+    display: block;
+    background: none;
+    border: none;
+    font-size: 32px;
+    line-height: 1;
+    color: #ff3d87;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  /* Sembunyikan menu dulu di HP */
+  nav ul{
+    display: none !important;
+    position: absolute;
+    top: 100%;
+    left: 8%;
+    flex-direction: column !important;
+    gap: 16px !important;
+    background: linear-gradient(135deg,#ffd9ec,#dbeafe,#f8f9ff);
+    backdrop-filter: blur(15px);
+    padding: 18px 28px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(255,61,135,.18);
+  }
+
+  /* Muncul saat titik tiga ditekan */
+  nav ul.open{
+    display: flex !important;
+  }
+}
+
+/* ==========================================
+   GALLERY RAPI — laptop 3 kolom, HP 2 kolom
+========================================== */
+
+/* LAPTOP: 3 kolom, foto seragam & agak kecil */
+.gallery-container{
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 20px !important;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.gallery-item img{
+  width: 100% !important;
+  height: 300px !important;
+  object-fit: cover !important;
+  display: block;
+}
+
+/* HP: kembali 2 kolom biar tidak sempit */
+@media screen and (max-width: 768px){
+  .gallery-container{
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px !important;
+  }
+  .gallery-item img{
+    height: 240px !important;   /* pas untuk 2 kolom di HP */
+  }
+}
+
+/* ==========================================
+   SURAT (LETTER) — perkecil tulisan di HP saja
+========================================== */
+@media screen and (max-width: 768px){
+
+  /* Paragraf isi surat diperkecil & lebih rapat */
+  .letter-card p{
+    font-size: 15px !important;
+    line-height: 26px !important;
+  }
+
+  /* Judul "Dear My Lovely Friends & Family" diperkecil sedikit */
+  .letter-card h3{
+    font-size: 20px !important;
+  }
+
+  /* Kurangi jarak atas-bawah kartu supaya tidak terlalu panjang */
+  .letter-card{
+    padding: 22px 20px !important;
+  }
+}
+
